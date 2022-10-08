@@ -34,4 +34,4 @@ obj_Amplitute = sqrt.(obj_Intensity);
 obj_Amplitute_1d = diag(obj_Amplitute);
 plot(obj_Amplitute_1d, legend=false, title="Input Object", ylabel="Amplitude", xlabel="Index")
 
-CSV.write("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/SettingUpTestObject/TestObjectAmplitude.csv", Tables.table(obj_Amplitute_1d'), writeheader=false)
+CSV.write("C://.../TestObjectAmplitude.csv", Tables.table(obj_Amplitute_1d'), writeheader=false)
