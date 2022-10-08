@@ -12,7 +12,7 @@ plot(obj_Amplitute_1d, legend=false, title="Input Object", ylabel="Amplitude", x
 λ = 0.5e-6;            # wavelength
 k0 = 2*pi/λ;      # wave number
 PS = 0.5e-6;           # Pixel size of image sensor
-NA = 0.3;              # Numerical aperture of objective lens
+NA = 0.2;              # Numerical aperture of objective lens
 CutOffFreq = NA*k0;    # CutOff Frequency
 
 # simulate low pass filtering process of imaging system
@@ -44,25 +44,24 @@ end
 CohTransFunc = (k_ym.^2 + k_xm.^2).<CutOffFreq^2;
 heatmap(CohTransFunc, title="Coherent Transfer Function"
         ,aspect_ratio=1, grid=false, lims=(0,res_obj), legend=false,framestyle = :box);
-# savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/CTF/CTF.png")
+savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/02_CTF/CTF.png")
 
 output_FT = CohTransFunc.*FT_obj_Intensity;
 heatmap(log.(abs.(output_FT)), title="Log of absolute of Output in Fourier space",      aspect_ratio=1, grid=false, lims=(0,res_obj),framestyle = :box)
-#savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/CTF/LogAbsOutputinFS.png")
+#savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/02_CTF/LogAbsOutputinFS.png")
 
 output_Amp = ifft(ifftshift(output_FT));
 output_Amp = abs.(output_Amp);
 
 output1D = diag(output_Amp);
-input1D = obj_Amplitute_1d;
-plot(normalize(input1D), label="Input", marker=true, markersize=2)
+input1D = vec(obj_Amplitute_1d);
+plot(normalize(input1D), label="Input")
 plot!(normalize(output1D), label="Output", marker=true, markersize=2, linestyle=:dash)
-
 plot!(title="Comparing input-output", ylabel="Amplitude", xlabel="Index", legend=:bottomright)
-#savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/CTF/CTF_ComparingInputOutput.png")
+savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/02_CTF/CTF_ComparingInputOutput.png")
 
     #############################
 
 # Error
-error = abs.(output1D .- input1D);
+error = abs.(normalize(output1D) .- normalize(input1D));
 plot(error)
