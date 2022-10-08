@@ -3,7 +3,7 @@ using Plots, ColorSchemes
 using CSV, Tables, DataFrames
 
 # 1 D object
-obj_Amplitute_1d = CSV.read("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/03_inCTF/TestObjectAmplitude.csv", DataFrame, header=false);
+obj_Amplitute_1d = CSV.read("C://.../TestObjectAmplitude.csv", DataFrame, header=false);
 obj_Amplitute_1d = Matrix(obj_Amplitute_1d);
 plot(obj_Amplitute_1d, legend=false, title="Input Object", ylabel="Amplitude", xlabel="Index")
 # 1D Object as a diagonal 2D matrix
@@ -52,11 +52,11 @@ incohTransFunc = incohTransFunc./(maximum(incohTransFunc));
 
 heatmap(incohTransFunc, title="Incoherent Transfer Function"
         ,aspect_ratio=1, grid=false, lims=(0,res_obj),framestyle = :box);
-savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/03_inCTF/inCTF.png")
+savefig("C://.../inCTF.png")
 
 output_FT = incohTransFunc.*FT_obj_Intensity;
 heatmap(log.(abs.(output_FT)), title="Log of absolute of Output in Fourier space",      aspect_ratio=1, grid=false, lims=(0,res_obj),framestyle = :box)
-savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/03_inCTF/LogAbsOutputinFS.png")
+savefig("C://.../LogAbsOutputinFS.png")
 
 output_Int = ifft(ifftshift(output_FT));
 output_Amp = abs.(output_Int);
@@ -66,7 +66,7 @@ input1D = vec(obj_Amplitute_1d);
 plot(normalize(input1D), label="Input")
 plot!(normalize(output1D), label="Output", marker=true, markersize=2, linestyle=:dash)
 plot!(title="Comparing input-output", ylabel="Amplitude", xlabel="Index", legend=:bottomright)
-savefig("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/03_inCTF/inCTF_ComparingInputOutput.png")
+savefig("C://.../inCTF_ComparingInputOutput.png")
 
     #############################
 
