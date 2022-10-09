@@ -3,10 +3,11 @@ using Plots, ColorSchemes
 using CSV, Tables, DataFrames
 
 # 1 D object
-obj_Amplitute_1d = CSV.read("C://.../TestObjectAmplitude.csv", DataFrame, header=false);
-obj_Amplitute_1d = Matrix(obj_Amplitute_1d)';
+obj_Amplitute_1d = CSV.read("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/Julia_Code/01_SettingUpTestObject/TestObjectAmplitude.csv", DataFrame, header=false);
+obj_Amplitute_1d = vec(Matrix(obj_Amplitute_1d));
 plot(obj_Amplitute_1d, legend=false, title="Input Object", ylabel="Amplitude", xlabel="Index")
-        ######################################
+# 1D Object as a diagonal 2D matrix
+obj_Amplitute = Diagonal(obj_Amplitute_1d);
 
 # set up the coherent imaging system (parameters)
 λ = 0.5e-6;            # wavelength
