@@ -1,7 +1,7 @@
 using FFTW, LinearAlgebra, Plots, ColorSchemes, CSV, Tables, DataFrames
 # using ToeplitzMatrices;
 
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/01_SettingUpTestObject_Probe")
+cd("...")
 
 test_object_amp = CSV.read("TestObjectAmplitude.csv", DataFrame, header=false);
 test_object_phase = CSV.read("TestPhase.csv", DataFrame, header=false);
