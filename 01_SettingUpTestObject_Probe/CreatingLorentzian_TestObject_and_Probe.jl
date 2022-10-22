@@ -2,7 +2,7 @@ using LinearAlgebra, OffsetArrays
 using Plots
 using CSV, Tables
 
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/01_SettingUpTestObject_Probe")
+cd(".../01_SettingUpTestObject_Probe")
 
 x_end = 0.5
 x_res = 0.0005
