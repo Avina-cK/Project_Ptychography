@@ -1,6 +1,6 @@
 using LinearAlgebra, Plots, FFTW
 
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/00_BasicFunctions")
+cd(".../00_BasicFunctions")
 
 x_end = 0.5
 x_res = 0.0005
