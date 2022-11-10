@@ -1,9 +1,9 @@
 using FFTW, LinearAlgebra, Plots, ColorSchemes, CSV, Tables, DataFrames, OffsetArrays
 # using ToeplitzMatrices;
 
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/02_ForwardModel")
+cd(".../02_ForwardModel")
 
-include("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/01_SettingUpTestObject_Probe/CreatingLorentzian_TestObject_and_Probe.jl")
+include(".../01_SettingUpTestObject_Probe/CreatingLorentzian_TestObject_and_Probe.jl")
 
 obj_amp = objectAmplitude;
 obj_phase = phase;
