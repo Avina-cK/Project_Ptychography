@@ -4,7 +4,7 @@ using OffsetArrays
 using Plots
 using Tables
 
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/01_SettingUpTestObject_Probe")
+cd(".../01_SettingUpTestObject_Probe")
 
 ω_end = 0.5;
 ω_res = 0.005;
