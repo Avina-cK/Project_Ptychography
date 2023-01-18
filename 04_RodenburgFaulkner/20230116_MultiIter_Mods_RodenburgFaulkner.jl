@@ -12,9 +12,9 @@ using FFTW, LinearAlgebra, Plots, ColorSchemes, StatsBase
 =#
 
 # Setting up system and directory
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/04_RodenburgFaulkner")
+cd(".../04_RodenburgFaulkner")
 
-include("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/02_ForwardModel/ForwardModel.jl");
+include(".../02_ForwardModel/ForwardModel.jl");
 #= imports:    
     ω: freq domain
     Δω: resolution of ω
