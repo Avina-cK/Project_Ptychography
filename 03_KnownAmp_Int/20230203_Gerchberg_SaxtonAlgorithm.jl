@@ -23,9 +23,9 @@ and
 
 ## Setting up system and directory
 
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/03_KnownAmp-Int")
+cd(".../JuliaCode/03_KnownAmp-Int")
 
-include("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/01_SettingUpTestObject_Probe/CreatingLorentzian_TestObject_and_Probe.jl")
+include("...JuliaCode/01_SettingUpTestObject_Probe/CreatingLorentzian_TestObject_and_Probe.jl")
 
 #=
 imports:    ω: freq domain
