@@ -1,7 +1,6 @@
 ## Sources
     
-    A practical algorithm for the determination
-    of phase from image and diffraction plane pictures
+    A practical algorithm for the determination of phase from image and diffraction plane pictures
         R. W. Gerchberg and W. O. Saxton,
         1972
         Optik
