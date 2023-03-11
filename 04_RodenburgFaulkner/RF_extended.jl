@@ -16,10 +16,10 @@ using OffsetArrays
 =#
 
 # Set M_max to 11
-include("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/02_ForwardModel/ForwardModel.jl");
+include(".../02_ForwardModel/ForwardModel.jl");
 
 # Setting up system directory
-cd("C://Users/avina/Documents/2020-2022_MSc_MathMods/401_Thesis/JuliaCode/04_RodenburgFaulkner")
+cd(".../04_RodenburgFaulkner")
 
 #= imports:    
     ω: freq domain
