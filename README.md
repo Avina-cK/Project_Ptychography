@@ -1,3 +1,3 @@
-# MScThesis_Ptychography
+#Ptychography
 
-Repository for all code related to my M.Sc. Thesis on Phase Retrival using Ptychography.
+Repository for all code related to project on Phase Retrival using Ptychography.
